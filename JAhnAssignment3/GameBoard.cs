@@ -3,6 +3,7 @@
 * Revision History
 *   Jaden Ahn, 2017.10.08: Created
 *   Jaden Ahn, 2017.10.15: Improved class structure
+*   Jaden Ahn, 2017.11.04: Changed starting btn text from 0 to 1
 */
 
 using System;
