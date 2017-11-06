@@ -59,7 +59,7 @@ namespace JAhnAssignment3
             this.Size = new Size(400, 400);
             totalClick = 0;
             lblClickNumber.Text = "";
-            this.Text = "15 Puzzle";
+            this.Text = "fifteeN Puzzle";
         }
 
         /// <summary>
@@ -234,6 +234,17 @@ namespace JAhnAssignment3
                     t.Height = TILE_HEIGHT;
                     t.Text = ((newNumberOfCol * i) + j + 1).ToString();
                     t.Name = "Btn" + ((newNumberOfCol * i) + j).ToString();
+                    //t.BackgroundImage = buttonImage;
+                    if ((((newNumberOfCol * i) + j) % 2) == 0)
+                    {
+                        t.BackColor = Color.FromArgb(24, 86, 81);
+                        t.ForeColor = Color.White;
+                    }
+                    else
+                    {
+                        t.BackColor = Color.FromArgb(255, 255, 255);
+                    }
+                    t.Font = new Font(FontFamily.GenericSansSerif,08.0F, FontStyle.Bold);
                     pnlTile.Controls.Add(t);
                     startX += TILE_WIDTH + GAP;
                     t.Click += T_Click;
