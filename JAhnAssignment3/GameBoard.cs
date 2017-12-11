@@ -4,6 +4,7 @@
 *   Jaden Ahn, 2017.10.08: Created
 *   Jaden Ahn, 2017.10.15: Improved class structure
 *   Jaden Ahn, 2017.11.04: Changed starting btn text from 0 to 1
+*   Jaden Ahn, 2017.12.11: Added MIN_SIZE, MAX_SIZE
 */
 
 using System;
@@ -31,6 +32,8 @@ namespace JAhnAssignment3
         int numberOfCol;
         int totalClick;
         string[] board;
+        const int MIN_SIZE = 2;
+        const int MAX_SIZE = 10;
         const int TILE_WIDTH = 60;
         const int TILE_HEIGHT = 60;
         const int GAP = 6;
@@ -288,7 +291,7 @@ namespace JAhnAssignment3
             {
                 numberOfRow = int.Parse(txtRow.Text);
                 numberOfCol = int.Parse(txtCol.Text);
-                if (numberOfRow < 2 || numberOfCol < 2 || numberOfRow > 10 || numberOfCol > 10)
+                if (numberOfRow < MIN_SIZE || numberOfCol < MIN_SIZE || numberOfRow > MAX_SIZE || numberOfCol > MAX_SIZE)
                 {
                     //For performance issue, limit the max to 10
                     MessageBox.Show("Please enter numbers between 2 and 10");
